@@ -23,9 +23,21 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
+# Key bindings
+# For iterm2 add keybinding escape sequence
+bindkey -e
+bindkey '^[f' forward-word
+bindkey '^[b' backward-word
+bindkey '^[h' backward-delete-word
+bindkey '^[d' backward-kill-line
+
 # Init rbenv and nodenv
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
+eval "$(goenv init -)"
+
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
 # mkdir .git/safe in the root of repositories you trust
 export PATH=".git/safe/../../bin:$PATH"

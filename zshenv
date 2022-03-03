@@ -11,5 +11,7 @@ export RCRC="$HOME/.dotfiles/rcrc"
 # Use localhost for postgres by default
 export PGHOST=localhost
 
+export GOPATH="$HOME/go"
+
 # Keys config
 [[ -f ~/.zshenv.keys ]] && source ~/.zshenv.keys
